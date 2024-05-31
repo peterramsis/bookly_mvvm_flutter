@@ -1,4 +1,5 @@
 import 'package:bookly/core/utils/assets.dart';
+import 'package:bookly/features/splash/presentation/views/widget/sliding_text.dart';
 import 'package:flutter/material.dart';
 
 class SplashViewBody extends StatefulWidget {
@@ -15,7 +16,6 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initSlidingAnimation();
   }
@@ -30,12 +30,9 @@ class _SplashViewBodyState extends State<SplashViewBody>
         const SizedBox(
           height: 4,
         ),
-        AnimatedBuilder(animation: slidingAnimation , builder: (context , build){
-          return SlideTransition(position: slidingAnimation , child: const Text(
-            'Read Free Books',
-            textAlign: TextAlign.center,
-          ));
-        })
+        SlidingText(
+          slidingAnimation: slidingAnimation,
+        )
       ],
     );
   }
