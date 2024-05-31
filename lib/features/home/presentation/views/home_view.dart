@@ -1,5 +1,6 @@
+import 'package:bookly/core/utils/style.dart';
 import 'package:bookly/features/home/presentation/views/widget/custom_app_bar.dart';
-import 'package:bookly/features/home/presentation/views/widget/custom_best_seller_item.dart';
+import 'package:bookly/features/home/presentation/views/widget/custome_best_seller_list_view.dart';
 import 'package:bookly/features/home/presentation/views/widget/featured_list_view.dart';
 
 import 'package:flutter/material.dart';
@@ -10,32 +11,46 @@ class HomeView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  const Scaffold(
-      body: Padding(
+      body:Padding(
         padding: EdgeInsets.only(
-          top: 50,
-          bottom: 20,
-          right: 20,
-          left: 20
+            top: 50,
+            bottom: 20,
+            right: 20,
+            left: 20
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            CustomAppBar(),
-            FeaturedListView(),
-            SizedBox(
-              height:10,
+        child: CustomScrollView(
+          slivers: [
+            SliverToBoxAdapter(
+                child: CustomAppBar()
             ),
-            Text(
-              "Best seller",
-              style: TextStyle(
-                  fontSize: 20
+            SliverToBoxAdapter(
+                child: FeaturedListView()
+            ),
+            SliverFillRemaining(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+
+                  SizedBox(
+                    height:10,
+                  ),
+                  Text(
+                    "Best seller",
+                    style: Styles.textStyle30,
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  CustomBestSellerListView()
+                ],
               ),
-            ),
-            CustomBestSellerItem()
+            )
+
+
           ],
         ),
-      ),
+      ) ,
     );
   }
 }
