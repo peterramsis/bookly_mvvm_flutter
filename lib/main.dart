@@ -15,10 +15,8 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Book',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-          scaffoldBackgroundColor: kPrimaryColor,
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
-        useMaterial3: true,
+      theme: ThemeData.dark().copyWith(
+        scaffoldBackgroundColor: kPrimaryColor,
       ),
       home: const SplashView(),
     );
