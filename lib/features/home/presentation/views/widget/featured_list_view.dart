@@ -9,7 +9,12 @@ class FeaturedListView extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * .3,
       child: ListView.builder(itemBuilder: (context , index){
-         return const CustomImageItem();
+         return const Padding(
+           padding: EdgeInsets.symmetric(
+             horizontal: 5
+           ),
+           child: CustomImageItem(),
+         );
       }, itemCount: 10 , scrollDirection: Axis.horizontal, padding: EdgeInsets.zero , physics: const BouncingScrollPhysics(),),
     );
   }

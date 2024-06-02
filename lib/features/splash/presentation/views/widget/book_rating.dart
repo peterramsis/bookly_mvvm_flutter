@@ -7,6 +7,7 @@ class BookRating extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return  const Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Icon(Icons.star , color: Colors.yellow,),
         Text("4.8 (2390)" , style: Styles.textStyle18,)
