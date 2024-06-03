@@ -42,7 +42,7 @@ class ServerFailure {
     }
   }
 
-  factory ServerFailure.fromResponse(int? statusCode, dynamic data) {
+  factory ServerFailure.fromResponse(int? statusCode, dynamic response) {
     if (statusCode == null) {
       return ServerFailure('Received invalid status code from server');
     }
@@ -57,6 +57,8 @@ class ServerFailure {
         return ServerFailure('Not found');
       case 500:
         return ServerFailure('Internal server error');
+      case 422:
+        return ServerFailure(response['error']['message']);
       default:
         return ServerFailure('Received invalid status code: $statusCode');
     }
