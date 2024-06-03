@@ -20,7 +20,6 @@ abstract class AppRouter {
         path: kBookDetailsView,
         builder: (context, state) => const BookDetailsView(),
       ),
-
     ],
   );
 }

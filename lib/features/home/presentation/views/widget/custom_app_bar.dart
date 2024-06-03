@@ -8,9 +8,14 @@ class CustomAppBar extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Image.asset(AssetsData.logo , height: 18),
+        Image.asset(AssetsData.logo, height: 18),
         const Spacer(),
-        IconButton(onPressed: (){}, icon: const Icon(Icons.search_rounded , size: 28,))
+        IconButton(
+            onPressed: () {},
+            icon: const Icon(
+              Icons.search_rounded,
+              size: 28,
+            ))
       ],
     );
   }

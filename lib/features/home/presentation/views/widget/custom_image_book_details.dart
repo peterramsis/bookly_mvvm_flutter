@@ -7,10 +7,13 @@ class CustomImageBookDetails extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      child: AspectRatio(aspectRatio: 2.9/4, child: Image.asset(
-        AssetsData.imageTest,
-        fit: BoxFit.fill,
-      ),),
+      child: AspectRatio(
+        aspectRatio: 2.9 / 4,
+        child: Image.asset(
+          AssetsData.imageTest,
+          fit: BoxFit.fill,
+        ),
+      ),
     );
   }
 }

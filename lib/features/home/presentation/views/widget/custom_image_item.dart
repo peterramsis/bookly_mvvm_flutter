@@ -9,10 +9,13 @@ class CustomImageItem extends StatelessWidget {
     return SizedBox(
       height: MediaQuery.of(context).size.height * .3,
       width: 150,
-      child: AspectRatio(aspectRatio: 3/4, child: Image.asset(
-        AssetsData.imageTest,
-        fit: BoxFit.fill,
-      ),),
+      child: AspectRatio(
+        aspectRatio: 3 / 4,
+        child: Image.asset(
+          AssetsData.imageTest,
+          fit: BoxFit.fill,
+        ),
+      ),
     );
   }
 }

@@ -11,13 +11,16 @@ class CustomSimilarBody extends StatelessWidget {
     var height = MediaQuery.of(context).size.height;
     return SizedBox(
       width: width,
-      child:  Column(
+      child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           SizedBox(
-            height: height *.04,
+            height: height * .04,
           ),
-          const Text("You can also like" , style: Styles.textStyle16,),
+          const Text(
+            "You can also like",
+            style: Styles.textStyle16,
+          ),
           const SizedBox(
             height: 20,
           ),

@@ -11,8 +11,8 @@ class CustomBestSellerItem extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  GestureDetector(
-      onTap: (){
+    return GestureDetector(
+      onTap: () {
         GoRouter.of(context).push(AppRouter.kBookDetailsView);
       },
       child: Row(
@@ -23,7 +23,7 @@ class CustomBestSellerItem extends StatelessWidget {
             height: 125,
             child: AspectRatio(
               aspectRatio: 2.7 / 4,
-              child: Image.asset(AssetsData.imageTest , fit: BoxFit.fill),
+              child: Image.asset(AssetsData.imageTest, fit: BoxFit.fill),
             ),
           ),
           const SizedBox(
@@ -35,20 +35,28 @@ class CustomBestSellerItem extends StatelessWidget {
               children: [
                 SizedBox(
                   width: MediaQuery.of(context).size.width * .5,
-                  child: const Text("Harry Potter and the Goblet of Fire" , style: Styles.textStyle20, softWrap: true , overflow: TextOverflow.ellipsis , maxLines: 3),
+                  child: const Text("Harry Potter and the Goblet of Fire",
+                      style: Styles.textStyle20,
+                      softWrap: true,
+                      overflow: TextOverflow.ellipsis,
+                      maxLines: 3),
                 ),
                 const SizedBox(
                   height: 9,
                 ),
-                const Text("J.K. Rowling" , style: Styles.textStyle14,),
+                const Text(
+                  "J.K. Rowling",
+                  style: Styles.textStyle14,
+                ),
                 const SizedBox(
                   height: 9,
                 ),
-
-
                 const Row(
                   children: [
-                    Text("19.99 €" , style: Styles.textStyle20,),
+                    Text(
+                      "19.99 €",
+                      style: Styles.textStyle20,
+                    ),
                     Spacer(),
                     BookRating()
                   ],

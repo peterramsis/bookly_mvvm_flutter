@@ -10,9 +10,7 @@ class CustomRatingWidget extends StatelessWidget {
     return const Column(
       mainAxisAlignment: MainAxisAlignment.center,
       crossAxisAlignment: CrossAxisAlignment.center,
-      children: [
-        BookRating()
-      ],
+      children: [BookRating()],
     );
   }
 }
