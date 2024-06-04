@@ -45,7 +45,6 @@ class BookModel extends Equatable {
         'volumeInfo': volumeInfo?.toJson(),
         'saleInfo': saleInfo?.toJson(),
         'accessInfo': accessInfo?.toJson(),
-        'searchInfo': searchInfo?.toJson(),
       };
 
   @override
@@ -58,7 +57,6 @@ class BookModel extends Equatable {
       volumeInfo,
       saleInfo,
       accessInfo,
-      searchInfo,
     ];
   }
 }
