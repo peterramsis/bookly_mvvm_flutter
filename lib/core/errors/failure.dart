@@ -6,9 +6,9 @@ abstract class Failure {
   const Failure(this.message);
 }
 
-class ServerFailure {
+class ServerFailure extends Failure {
   final String message;
-  ServerFailure(this.message);
+  ServerFailure(this.message) : super(message);
 
   factory ServerFailure.fromDioError(DioException dioError) {
     switch (dioError.type) {
