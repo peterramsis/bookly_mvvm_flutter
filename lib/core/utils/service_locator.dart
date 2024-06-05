@@ -3,12 +3,12 @@ import 'package:bookly/features/home/data/repository/home_repository_implementat
 import 'package:dio/dio.dart';
 import 'package:get_it/get_it.dart';
 
-final getIt = GetIt.instance;
+final sl = GetIt.instance;
 
 class ServiceLocator {
   void init() {
-    getIt.registerSingleton<AppServices>(AppServices(Dio()));
-    getIt.registerSingleton<HomeRepositoryImplementation>(
-        HomeRepositoryImplementation(apiService: getIt.get<AppServices>()));
+    sl.registerSingleton<AppServices>(AppServices(Dio()));
+    sl.registerSingleton<HomeRepositoryImplementation>(
+        HomeRepositoryImplementation(apiService: sl.get<AppServices>()));
   }
 }

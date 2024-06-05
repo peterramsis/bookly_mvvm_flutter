@@ -9,7 +9,7 @@ class SimilarBooksCubit extends Cubit<SimilarBooksState> {
     required this.homeRepository,
   }) : super(SimilarBooksInitial());
 
-  Future<void> fetchNewestBooks() async {
+  Future<void> fetchSimilarBooks() async {
     emit(SimilarBooksLoading());
     var result = await homeRepository.fetchNewestBooks();
     result.fold(
